@@ -6,8 +6,8 @@ const API_URL = 'http://127.0.0.1:8000/api/random_greeting';
 // Action Thunk
 export const fetchGreeting = createAsyncThunk('fetchMessages', async () => {
   const response = await fetch(API_URL);
-  const data = await response.json()
-  return data
+  const data = await response.json();
+  return data;
 });
 
 // Reducers

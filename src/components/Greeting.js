@@ -7,20 +7,19 @@ const Greeting = () => {
   let greeting = useSelector((state) => state.greeting);
 
   if (greeting === null || greeting === undefined) {
-    greeting = {}
+    greeting = {};
   }
-  console.log(greeting)
+
   useEffect(() => {
     dispatch(fetchGreeting());
   }, [dispatch]);
 
   const postGreeting = () => {
     if (greeting.message) {
-      return <h1>{greeting.message}</h1>
+      return <h1>{greeting.message}</h1>;
     }
-    return <h1>Loading...</h1>
+    return <h1>Loading...</h1>;
   };
-
 
   return (
     <div>
